@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+    pytorch:
+        build: .
+        container_name: pytorch
+        image: pytorch-image
+        volumes:
+            - ./../mnt:/home/jovyan/pytorch
+        runtime: nvidia
+        tty: true
+        command: "jupyter-lab"
+        ports:
+            - 8888:8888

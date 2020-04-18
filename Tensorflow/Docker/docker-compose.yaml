@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+    pytorch:
+        build: .
+        container_name: tensorflow2
+        image: tensorflow2-image
+        volumes:
+            - ./../mnt:/home/jovyan/tf
+        runtime: nvidia
+        tty: true
+        command: "jupyter-lab"
+        ports:
+            - 8888:8888
