@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-    pytorch:
+    tensorflow2:
         build: .
         container_name: tensorflow2
         image: tensorflow2-image
